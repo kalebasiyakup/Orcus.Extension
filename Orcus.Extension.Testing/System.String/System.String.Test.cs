@@ -7,8 +7,12 @@ namespace Orcus.Extension.Testing
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void LeftArgumentNullExceptionTest()
         {
+            string value = null;
+            Action test = () => value.Left(1);
+
+            Assert.ThrowsException<ArgumentNullException>(test);
         }
     }
 }
