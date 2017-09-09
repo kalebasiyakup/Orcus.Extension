@@ -91,6 +91,7 @@
     <Compile Include="System.Object\Object.Serialize\Object.SerializeBinary.cs" />
     <Compile Include="System.OperatingSystem\OperatingSystem.FormatToHtml.cs" />
     <Compile Include="System.Random\Random.Generate.cs" />
+    <Compile Include="System.String\String.ToSha512.cs" />
     <Compile Include="System.String\String.ToMd5Hash.cs" />
     <Compile Include="System.Web\HttpContext.MachineName.cs" />
     <Compile Include="System.Web\HttpContext.IpAdress.cs" />
