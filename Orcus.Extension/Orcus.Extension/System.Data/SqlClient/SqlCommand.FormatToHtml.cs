@@ -6,7 +6,7 @@ public static partial class OrcusSqlCommandExtension
 {
     public static string FormatToHtml(this SqlCommand sqlCommand)
     {
-        sqlCommand.ThrowIfNull(nameof(sqlCommand));
+        sqlCommand.ExceptionIfNull(nameof(sqlCommand));
 
         var stringBuilder = new StringBuilder();
 

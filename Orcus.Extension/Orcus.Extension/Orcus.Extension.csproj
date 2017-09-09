@@ -56,6 +56,7 @@
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNullOrEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.ToDataTable.cs" />
+    <Compile Include="System.Collections.Generic\IList\IList.ToCsv.cs" />
     <Compile Include="System.Data\SqlClient\SqlCommand.FormatToHtml.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToCsv.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToList.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="System.Object\Object.Serialize\Object.SerializeBinary.cs" />
     <Compile Include="System.OperatingSystem\OperatingSystem.FormatToHtml.cs" />
     <Compile Include="System.Random\Random.Generate.cs" />
+    <Compile Include="System.String\String.ToMd5Hash.cs" />
     <Compile Include="System.Web\HttpContext.MachineName.cs" />
     <Compile Include="System.Web\HttpContext.IpAdress.cs" />
     <Compile Include="System.Web\HttpContext.FormatHttpContext.cs" />
@@ -93,7 +95,7 @@
     <Compile Include="System.String\String.Right.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="System.Object\Generic\Object.Generic.ThrowIfNull.cs" />
+    <Compile Include="System.Object\Generic\Object.Generic.ExceptionIfNull.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

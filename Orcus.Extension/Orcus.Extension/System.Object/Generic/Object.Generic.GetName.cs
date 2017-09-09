@@ -5,14 +5,14 @@ public static partial class OrcusObjectExtension
 {
     public static string GetName<TObject, TMember>(this TObject obj, Expression<Func<TObject, TMember>> expression)
     {
-        expression.ThrowIfNull(nameof(expression));
+        expression.ExceptionIfNull(nameof(expression));
 
         return GetName(expression.Body);
     }
 
     public static string GetName<TObject, TMember>(this TObject obj, Expression<Func<TMember>> expression)
     {
-        expression.ThrowIfNull(nameof(expression));
+        expression.ExceptionIfNull(nameof(expression));
 
         return GetName(expression.Body);
     }

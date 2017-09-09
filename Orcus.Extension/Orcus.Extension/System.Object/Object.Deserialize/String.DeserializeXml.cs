@@ -5,7 +5,7 @@ public static partial class OrcusObjectExtension
 {
     public static T DeserializeXml<T>(this string str)
     {
-        str.ThrowIfNull(nameof(str));
+        str.ExceptionIfNull(nameof(str));
 
         var xmlSerializer = new XmlSerializer(typeof(T));
         var stringReader = new StringReader(str);

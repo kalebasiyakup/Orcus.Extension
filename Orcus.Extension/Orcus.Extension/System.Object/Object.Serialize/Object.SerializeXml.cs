@@ -5,7 +5,7 @@ public static partial class OrcusObjectExtension
 {
     public static string SerializeXml(this object obj)
     {
-        obj.ThrowIfNull(nameof(obj));
+        obj.ExceptionIfNull(nameof(obj));
 
         var xmlSerializer = new XmlSerializer(obj.GetType());
 

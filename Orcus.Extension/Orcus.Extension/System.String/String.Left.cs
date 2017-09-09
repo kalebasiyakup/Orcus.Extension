@@ -4,7 +4,7 @@ public static partial class OrcusStringExtension
 {
     public static string Left(this string value, int count)
     {
-        value.ThrowIfNull(nameof(value));
+        value.ExceptionIfNull(nameof(value));
 
         if (count < 0 || value.Length < count)
             throw new ArgumentOutOfRangeException(nameof(count), count, "Belirtilen karakter miktarı aralık dışında.");

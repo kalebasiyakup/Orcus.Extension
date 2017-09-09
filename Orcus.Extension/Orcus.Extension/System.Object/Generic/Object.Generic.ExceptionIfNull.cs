@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 public static partial class OrcusObjectExtension
 {
-    public static void ThrowIfNull<TObject>(this TObject obj,
+    public static void ExceptionIfNull<TObject>(this TObject obj,
         Expression<Func<TObject>> expression,
         string errorMessage = null)
     {
@@ -12,10 +12,10 @@ public static partial class OrcusObjectExtension
 
         var parameterName = expression.GetName(expression);
 
-        obj.ThrowIfNull(parameterName, errorMessage);
+        obj.ExceptionIfNull(parameterName, errorMessage);
     }
 
-    public static void ThrowIfNull<TObject>(this TObject obj,
+    public static void ExceptionIfNull<TObject>(this TObject obj,
         string parameterName,
         string errorMessage = null)
     {

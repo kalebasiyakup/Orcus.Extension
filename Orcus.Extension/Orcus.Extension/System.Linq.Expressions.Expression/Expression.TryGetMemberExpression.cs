@@ -4,7 +4,7 @@ public static class OrcusExpressionExtension
 {
     public static bool TryGetMemberExpression(this Expression expression, out MemberExpression memberExpression)
     {
-        expression.ThrowIfNull(nameof(expression));
+        expression.ExceptionIfNull(nameof(expression));
 
         while (true)
             switch (expression.NodeType)

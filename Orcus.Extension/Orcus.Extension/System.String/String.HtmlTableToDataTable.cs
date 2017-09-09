@@ -8,7 +8,7 @@ public static partial class OrcusStringExtension
 {
     public static DataTable HtmlTableToDataTable(this string html)
     {
-        html.ThrowIfNull(nameof(html));
+        html.ExceptionIfNull(nameof(html));
 
         return ParseTable(html);
     }

@@ -7,7 +7,7 @@ public static class OrcusExceptionExtension
 {
     public static string FormatExceptionToHtml(this Exception ex)
     {
-        ex.ThrowIfNull(nameof(ex));
+        ex.ExceptionIfNull(nameof(ex));
 
         var stringBuilder = new StringBuilder();
 

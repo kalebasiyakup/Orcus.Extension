@@ -7,7 +7,7 @@ public static partial class OrcusIEnumerableTExtension
 {
     public static DataTable ToDataTable<T>(this IEnumerable<T> collection)
     {
-        collection.ThrowIfNull(nameof(collection));
+        collection.ExceptionIfNull(nameof(collection));
         var dtReturn = new DataTable();
 
         PropertyInfo[] oProps = null;

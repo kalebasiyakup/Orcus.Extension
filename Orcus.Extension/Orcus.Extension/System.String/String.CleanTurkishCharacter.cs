@@ -2,7 +2,7 @@
 {
     public static string CleanTurkishCharacter(this string value)
     {
-        value.ThrowIfNull(nameof(value));
+        value.ExceptionIfNull(nameof(value));
 
         var mesaj = value;
         var oldValue = new[] { 'ö', 'Ö', 'ü', 'Ü', 'ç', 'Ç', 'İ', 'ı', 'Ğ', 'ğ', 'Ş', 'ş' };

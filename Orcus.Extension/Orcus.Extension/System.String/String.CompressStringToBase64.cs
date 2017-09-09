@@ -6,7 +6,7 @@ public static partial class OrcusStringExtension
 {
     public static string CompressStringToBase64(this string value)
     {
-        value.ThrowIfNull(nameof(value));
+        value.ExceptionIfNull(nameof(value));
 
         var buffer = Encoding.UTF8.GetBytes(value);
         var memoryStream = new System.IO.MemoryStream();

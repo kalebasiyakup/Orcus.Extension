@@ -6,7 +6,7 @@ public static partial class OrcusObjectExtension
 {
     public static T DeserializeJson<T>(this string str)
     {
-        str.ThrowIfNull(nameof(str));
+        str.ExceptionIfNull(nameof(str));
 
         var serializer = new DataContractJsonSerializer(typeof(T));
 
@@ -18,7 +18,7 @@ public static partial class OrcusObjectExtension
 
     public static T DeserializeJson<T>(this string str, Encoding encoding)
     {
-        str.ThrowIfNull(nameof(str));
+        str.ExceptionIfNull(nameof(str));
 
         var serializer = new DataContractJsonSerializer(typeof(T));
 

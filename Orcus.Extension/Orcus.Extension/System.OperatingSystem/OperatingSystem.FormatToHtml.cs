@@ -5,7 +5,7 @@ public static partial class OrcusOperatingSystemExtension
 {
     public static string FormatToHtml(this OperatingSystem operatingSystem)
     {
-        operatingSystem.ThrowIfNull(nameof(operatingSystem));
+        operatingSystem.ExceptionIfNull(nameof(operatingSystem));
 
         var stringBuilder = new StringBuilder();
         stringBuilder.Append("<table border=\"1\" cellpadding=\"1\" cellspacing=\"0\" style=\"text-align:left;width:800px;font-family:Tahoma;font-size: 12px;color:#000000;font-weight:normal;\">");

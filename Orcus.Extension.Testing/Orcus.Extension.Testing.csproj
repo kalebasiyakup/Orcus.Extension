@@ -48,9 +48,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System.Collections.Generic\IList\IList.ToCsv.Test.cs" />
     <Compile Include="System.Object\Object.IsNull.Test.cs" />
     <Compile Include="System.String\System.String.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_TestDataSource\DataSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

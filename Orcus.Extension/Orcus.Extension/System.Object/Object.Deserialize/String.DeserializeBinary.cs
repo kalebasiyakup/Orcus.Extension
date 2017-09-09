@@ -6,7 +6,7 @@ public static partial class OrcusObjectExtension
 {
     public static T DeserializeBinary<T>(this string str)
     {
-        str.ThrowIfNull(nameof(str));
+        str.ExceptionIfNull(nameof(str));
 
         using (var stream = new MemoryStream(Encoding.Default.GetBytes(str)))
         {
@@ -17,7 +17,7 @@ public static partial class OrcusObjectExtension
 
     public static T DeserializeBinary<T>(this string str, Encoding encoding)
     {
-        str.ThrowIfNull(nameof(str));
+        str.ExceptionIfNull(nameof(str));
 
         using (var stream = new MemoryStream(encoding.GetBytes(str)))
         {

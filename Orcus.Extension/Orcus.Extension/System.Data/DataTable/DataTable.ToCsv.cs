@@ -5,13 +5,19 @@ using System.Text;
 
 public static partial class OrcusDataTableExtension
 {
-    public static void ToCsv(this DataTable table, string delimiter, bool includeHeader, string savePath = @"c:\", string fileName = "export")
+    public static void ToCsv(this DataTable sourceDataTable,
+                                string pathToSave = @"c:\OrcusExport",
+                                string fileName = "ExportCsv",
+                                string delimiter = ";", 
+                                bool includeHeader = true)
     {
+        sourceDataTable.ExceptionIfNull(nameof(sourceDataTable));
+
         var result = new StringBuilder();
 
         if (includeHeader)
         {
-            foreach (DataColumn column in table.Columns)
+            foreach (DataColumn column in sourceDataTable.Columns)
             {
                 result.Append(column.ColumnName);
                 result.Append(delimiter);
@@ -20,7 +26,7 @@ public static partial class OrcusDataTableExtension
             result.Append(Environment.NewLine);
         }
 
-        foreach (DataRow row in table.Rows)
+        foreach (DataRow row in sourceDataTable.Rows)
         {
             foreach (var item in row.ItemArray)
             {
@@ -40,9 +46,9 @@ public static partial class OrcusDataTableExtension
             result.Append(Environment.NewLine);
         }
 
-        using (var writer = new StreamWriter(string.Concat(savePath, savePath.Right(1) == @"\" ? "" : @"\", fileName, ".csv"), true))
-        {
-            writer.Write(result.ToString());
-        }
+        if (!Directory.Exists(pathToSave))
+            Directory.CreateDirectory(pathToSave);
+
+        File.WriteAllText(string.Concat(pathToSave, pathToSave.Right(1) == @"\" ? "" : @"\", fileName, ".csv"), result.ToString());
     }
 }

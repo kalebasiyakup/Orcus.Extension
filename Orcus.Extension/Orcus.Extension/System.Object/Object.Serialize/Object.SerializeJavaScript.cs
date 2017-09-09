@@ -6,7 +6,7 @@ public static partial class OrcusObjectExtension
 {
     public static string SerializeJson<T>(this T obj)
     {
-        obj.ThrowIfNull(nameof(obj));
+        obj.ExceptionIfNull(nameof(obj));
 
         var serializer = new DataContractJsonSerializer(typeof(T));
 
@@ -19,7 +19,7 @@ public static partial class OrcusObjectExtension
 
     public static string SerializeJson<T>(this T obj, Encoding encoding)
     {
-        obj.ThrowIfNull(nameof(obj));
+        obj.ExceptionIfNull(nameof(obj));
 
         var serializer = new DataContractJsonSerializer(typeof(T));
 

@@ -6,7 +6,7 @@ public static partial class OrcusHttpContextExtension
 {
     public static string MachineName(this HttpContext httpContext)
     {
-        httpContext.ThrowIfNull(nameof(httpContext));
+        httpContext.ExceptionIfNull(nameof(httpContext));
 
         try
         {

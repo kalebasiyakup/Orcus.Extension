@@ -6,8 +6,8 @@ public static partial class OrcusStringExtension
         string separator,
         StringSplitOptions stringSplitOption = StringSplitOptions.None)
     {
-        value.ThrowIfNull(nameof(value));
-        separator.ThrowIfNull(nameof(separator));
+        value.ExceptionIfNull(nameof(value));
+        separator.ExceptionIfNull(nameof(separator));
 
         return value.Split(new[]
             {
@@ -20,8 +20,8 @@ public static partial class OrcusStringExtension
         StringSplitOptions stringSplitOption,
         params string[] separators)
     {
-        value.ThrowIfNull(nameof(value));
-        separators.ThrowIfNull(nameof(separators));
+        value.ExceptionIfNull(nameof(value));
+        separators.ExceptionIfNull(nameof(separators));
 
         return value.Split(separators, stringSplitOption);
     }

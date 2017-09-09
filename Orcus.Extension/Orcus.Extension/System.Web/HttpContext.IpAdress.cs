@@ -8,7 +8,7 @@ public static partial class OrcusHttpContextExtension
 {
     public static string IpAdress(this HttpContext httpContext)
     {
-        httpContext.ThrowIfNull(nameof(httpContext));
+        httpContext.ExceptionIfNull(nameof(httpContext));
 
         try
         {

@@ -6,7 +6,7 @@ public static partial class OrcusHttpContextExtension
 {
     public static string FormatHttpContext(this HttpContext httpContext)
     {
-        httpContext.ThrowIfNull(nameof(httpContext));
+        httpContext.ExceptionIfNull(nameof(httpContext));
 
         var stringBuilder = new StringBuilder();
         stringBuilder.Append("<table border=\"1\" cellpadding=\"1\" cellspacing=\"0\" style=\"text-align:left;width:800px;font-family:Tahoma;font-size: 12px;color:#000000;font-weight:normal;\">");
