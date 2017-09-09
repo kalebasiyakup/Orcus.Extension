@@ -60,6 +60,27 @@
     <Compile Include="System.Data\SqlClient\SqlCommand.FormatToHtml.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToCsv.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToList.cs" />
+    <Compile Include="System.DateTime\DateTime.IsWeekendDay.cs" />
+    <Compile Include="System.DateTime\DateTime.IsWeekDay.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffMiliSecond.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffSeconds.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffMinute.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffHour.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffWeek.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffDay.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffMonth.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffQuarter.cs" />
+    <Compile Include="System.DateTime\Diff\DateTime.DiffYear.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToLongTimeString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToLongDateString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToShortDateTimeString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToShortDateString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToShortTimeString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToFullDateShortTimeString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToYearMonthString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToMonthDayString.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToFullDateTimeString.cs" />
+    <Compile Include="System.IO.FileInfo\FileInfo.ReadToEnd.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeBinary.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeJavaScript.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeJson.cs" />
@@ -97,6 +118,8 @@
   <ItemGroup>
     <Compile Include="System.Object\Generic\Object.Generic.ExceptionIfNull.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="System.DateTime\DateTime.IsToday.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

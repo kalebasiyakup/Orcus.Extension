@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="System.Collections.Generic\IList\IList.ToCsv.Test.cs" />
+    <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToShortTimeString.Test.cs" />
     <Compile Include="System.Object\Object.IsNull.Test.cs" />
     <Compile Include="System.String\System.String.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
