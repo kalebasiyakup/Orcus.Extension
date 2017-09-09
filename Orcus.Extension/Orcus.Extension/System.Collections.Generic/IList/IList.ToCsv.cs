@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -60,7 +59,7 @@ public static partial class OrcusIListExtension
             var includeProps = include.ToLower().Split(',').ToList();
             foreach (var item in props)
             {
-                var propName = includeProps.Where(a => a == item.Name.ToLower()).FirstOrDefault();
+                var propName = includeProps.FirstOrDefault(a => a == item.Name.ToLower());
                 if (!string.IsNullOrEmpty(propName))
                     propList.Add(item);
             }
@@ -70,7 +69,7 @@ public static partial class OrcusIListExtension
             var excludeProps = exclude.ToLower().Split(',');
             foreach (var item in props)
             {
-                var propName = excludeProps.Where(a => a == item.Name.ToLower()).FirstOrDefault();
+                var propName = excludeProps.FirstOrDefault(a => a == item.Name.ToLower());
                 if (string.IsNullOrEmpty(propName))
                     propList.Add(item);
             }

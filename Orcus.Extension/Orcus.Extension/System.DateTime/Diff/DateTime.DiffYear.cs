@@ -2,12 +2,11 @@
 
 public static partial class OrcusDateTimeExtension
 {
-    public static Int64 DateDiffYear(this DateTime StartDate, DateTime EndDate)
+    public static long DateDiffYear(this DateTime startDate, DateTime endDate)
     {
-        StartDate.ExceptionIfNull(nameof(StartDate));
-        EndDate.ExceptionIfNull(nameof(EndDate));
-        System.Globalization.Calendar cal = System.Threading.Thread.CurrentThread.CurrentCulture.Calendar;
-        TimeSpan ts = new TimeSpan(EndDate.Ticks - StartDate.Ticks);
-        return (cal.GetYear(EndDate) - cal.GetYear(StartDate));
+        startDate.ExceptionIfNull(nameof(startDate));
+        endDate.ExceptionIfNull(nameof(endDate));
+        var cal = System.Threading.Thread.CurrentThread.CurrentCulture.Calendar;
+        return cal.GetYear(endDate) - cal.GetYear(startDate);
     }
 }

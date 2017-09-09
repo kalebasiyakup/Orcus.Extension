@@ -2,11 +2,11 @@
 
 public static partial class OrcusDateTimeExtension
 {
-    public static Int64 DateDiffDay(this DateTime StartDate, DateTime EndDate)
+    public static long DateDiffDay(this DateTime startDate, DateTime endDate)
     {
-        StartDate.ExceptionIfNull(nameof(StartDate));
-        EndDate.ExceptionIfNull(nameof(EndDate));
-        TimeSpan ts = new TimeSpan(EndDate.Ticks - StartDate.Ticks);
-        return (Int64)ts.TotalDays;
+        startDate.ExceptionIfNull(nameof(startDate));
+        endDate.ExceptionIfNull(nameof(endDate));
+        var ts = new TimeSpan(endDate.Ticks - startDate.Ticks);
+        return (long)ts.TotalDays;
     }
 }

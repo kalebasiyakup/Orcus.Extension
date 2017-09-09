@@ -2,15 +2,11 @@
 
 public static partial class OrcusDateTimeExtension
 {
-    public static Int64 DateDiffMonth(this DateTime StartDate, DateTime EndDate)
+    public static long DateDiffMonth(this DateTime startDate, DateTime endDate)
     {
-        StartDate.ExceptionIfNull(nameof(StartDate));
-        EndDate.ExceptionIfNull(nameof(EndDate));
-        System.Globalization.Calendar cal = System.Threading.Thread.CurrentThread.CurrentCulture.Calendar;
-        TimeSpan ts = new TimeSpan(EndDate.Ticks - StartDate.Ticks);
-        return (((cal.GetYear(EndDate)
-                                    - cal.GetYear(StartDate)) * 12
-                                    + cal.GetMonth(EndDate))
-                                    - cal.GetMonth(StartDate));
+        startDate.ExceptionIfNull(nameof(startDate));
+        endDate.ExceptionIfNull(nameof(endDate));
+        var cal = System.Threading.Thread.CurrentThread.CurrentCulture.Calendar;
+        return (cal.GetYear(endDate) - cal.GetYear(startDate)) * 12 + cal.GetMonth(endDate) - cal.GetMonth(startDate);
     }
 }

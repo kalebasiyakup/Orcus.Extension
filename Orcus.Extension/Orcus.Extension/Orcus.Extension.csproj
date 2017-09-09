@@ -52,7 +52,7 @@
     <Compile Include="System.Char\Char.IsLetter.cs" />
     <Compile Include="System.Char\Char.IsNumber.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotEmpty.cs" />
-    <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotNullOrEmpty.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotNullAndEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNullOrEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.ToDataTable.cs" />

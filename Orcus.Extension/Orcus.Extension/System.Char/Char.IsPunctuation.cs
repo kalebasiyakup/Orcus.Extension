@@ -5,5 +5,8 @@
     /// </summary>
     /// <param name="c">Karekter</param>
     /// <returns>"c" karekteri "true" ise değişken noktalama işaretlerinden oluşan bir değerdir. Aksi halde "false" döner.</returns>
-    public static bool IsPunctuation(this char c) => char.IsPunctuation(c);
+    public static bool IsPunctuation(this char c)
+    {
+        return char.IsPunctuation(c);
+    }
 }

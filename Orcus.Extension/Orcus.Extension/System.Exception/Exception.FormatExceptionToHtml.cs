@@ -19,8 +19,6 @@ public static class OrcusExceptionExtension
         if (ex.InnerException != null)
             stringBuilder.Append(OrcusHtmlFormat.RowAdd("InnerException Message", ex.InnerException.Message));
 
-        #endregion
-
         #region ExceptionData
 
         foreach (var pair in from DictionaryEntry pair in ex.Data
@@ -61,6 +59,8 @@ public static class OrcusExceptionExtension
         #endregion
 
         stringBuilder.Append("</table>");
+        #endregion
+
         return stringBuilder.ToString();
     }
 }

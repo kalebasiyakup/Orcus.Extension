@@ -16,7 +16,7 @@ public static partial class OrcusIEnumerableTExtension
         {
             if (oProps == null)
             {
-                oProps = ((Type)rec.GetType()).GetProperties();
+                oProps = rec.GetType().GetProperties();
                 foreach (var pi in oProps)
                 {
                     var colType = pi.PropertyType;

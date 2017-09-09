@@ -9,10 +9,15 @@ public static partial class OrcusDateTimeExtension
         return dateTime.ToString("g", DateTimeFormatInfo.CurrentInfo);
     }
 
+    /// <summary>
+    /// dd/MM/yyyy HH:mm
+    /// </summary>
+    /// <param name="dateTime"></param>
+    /// <returns>dd/MM/yyyy HH:mm</returns>
     public static String ToTrShortDateTimeString(this DateTime dateTime)
     {
         dateTime.ExceptionIfNull(nameof(dateTime));
-        return dateTime.ToString("g", new CultureInfo("tr-TR"));
+        return dateTime.ToString("dd/MM/yyyy HH:mm", new CultureInfo("tr-TR"));
     }
 
     public static String ToShortDateTimeString(this DateTime dateTime, string culture)
