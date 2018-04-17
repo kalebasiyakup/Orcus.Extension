@@ -4,11 +4,32 @@ using System.Text;
 
 public static partial class OrcusStringExtension
 {
+    /// <summary>
+    /// Değeri GZip metotu ile sıkıştırılmış Base64 değerine dönüştürür.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
     public static string CompressStringToBase64(this string value)
+    {
+        return _compressStringToBase64(value, new UTF8Encoding());
+    }
+
+    /// <summary>
+    /// Değeri GZip metotu ile sıkıştırılmış Base64 değerine dönüştürür.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="encoding"></param>
+    /// <returns></returns>
+    public static string CompressStringToBase64(this string value, Encoding encoding)
+    {
+        return _compressStringToBase64(value, encoding);
+    }
+
+    private static string _compressStringToBase64(string value, Encoding encoding)
     {
         value.ExceptionIfNull(nameof(value));
 
-        var buffer = Encoding.UTF8.GetBytes(value);
+        var buffer = encoding.GetBytes(value);
         var memoryStream = new System.IO.MemoryStream();
         using (var gZipStream = new GZipStream(memoryStream, CompressionMode.Compress, true))
         {

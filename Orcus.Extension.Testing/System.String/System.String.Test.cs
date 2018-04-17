@@ -11,7 +11,7 @@ namespace Orcus.Extension.Testing
         {
             string value = null;
             Action test = () => value.Left(1);
-
+            
             Assert.ThrowsException<ArgumentNullException>(test);
         }
     }

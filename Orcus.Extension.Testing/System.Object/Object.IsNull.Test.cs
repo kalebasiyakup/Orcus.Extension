@@ -10,7 +10,7 @@ namespace Orcus.Extension.Testing
         {
             var value = (object)"objetest";
             var actual = value.IsNull();
-
+            
             Assert.IsFalse(actual);
 
             value = null;

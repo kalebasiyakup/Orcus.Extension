@@ -5,7 +5,28 @@ using System.Text;
 
 public static partial class OrcusStringExtension
 {
+    /// <summary>
+    /// CompressStringToBase64 metotu ile sıkıştırılmış olan değeri GZip metotu ile açılmış olan değeri verir.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
     public static string DecompressStringFromBase64(this string value)
+    {
+        return _decompressStringFromBase64(value, new UTF8Encoding());
+    }
+
+    /// <summary>
+    /// CompressStringToBase64 metotu ile sıkıştırılmış olan değeri GZip metotu ile açılmış olan değeri verir.
+    /// </summary>
+    /// <param name="value"></param>
+    /// <param name="encoding"></param>
+    /// <returns></returns>
+    public static string DecompressStringFromBase64(this string value, Encoding encoding)
+    {
+        return _decompressStringFromBase64(value, encoding);
+    }
+
+    private static string _decompressStringFromBase64(string value, Encoding encoding)
     {
         byte[] gZipBuffer = Convert.FromBase64String(value);
         using (var memoryStream = new MemoryStream())
@@ -21,7 +42,7 @@ public static partial class OrcusStringExtension
                 gZipStream.Read(buffer, 0, buffer.Length);
             }
 
-            return Encoding.UTF8.GetString(buffer);
+            return encoding.GetString(buffer);
         }
     }
 }
