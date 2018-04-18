@@ -91,7 +91,7 @@
     <Compile Include="System.Object\Object.Serialize\Object.SerializeBinary.cs" />
     <Compile Include="System.OperatingSystem\OperatingSystem.FormatToHtml.cs" />
     <Compile Include="System.Random\Random.Generate.cs" />
-    <Compile Include="System.String\String.DecompressStringFromByteArray.cs" />
+    <Compile Include="System.String\String.Byte.cs" />
     <Compile Include="System.String\String.ToSha512.cs" />
     <Compile Include="System.String\String.ToMd5Hash.cs" />
     <Compile Include="System.Web\HttpContext.MachineName.cs" />
@@ -122,9 +122,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="System.DateTime\DateTime.IsToday.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="System.String\String.CompressStringToByteArray.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,10 +12,7 @@ public static partial class OrcusObjectExtension
         using (var stringWriter = new StringWriter())
         {
             xmlSerializer.Serialize(stringWriter, obj);
-            using (var streamReader = new StringReader(stringWriter.GetStringBuilder().ToString()))
-            {
-                return streamReader.ReadToEnd();
-            }
+            return stringWriter.ToString();
         }
     }
 }

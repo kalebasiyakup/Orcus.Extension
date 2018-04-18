@@ -9,6 +9,6 @@ public static partial class OrcusStringExtension
         if (count < 0 || value.Length < count)
             throw new ArgumentOutOfRangeException(nameof(count), count, "Belirtilen karakter miktarı aralık dışında.");
 
-        return value.Substring(value.Length - count, count);
+        return value.Substring(0, count);
     }
 }
