@@ -1,12 +1,14 @@
-﻿public static partial class OrcusCharExtension
+﻿using System;
+
+public static partial class OrcusCharExtension
 {
     /// <summary>
-    /// Eğer dönen değer true ise "c" değişken bir harfdir.
+    /// Eğer dönen değer true ise "char" değişken bir harfdir.
     /// </summary>
-    /// <param name="c">Karekter</param>
-    /// <returns>"c" karekteri "true" ise değişken harflerden oluşan bir değerdir. Aksi halde "false" döner.</returns>
-    public static bool IsLetter(this char c)
+    /// <param name="char">Karekter</param>
+    /// <returns>"char" karekteri "true" ise değişken harflerden oluşan bir değerdir. Aksi halde "false" döner.</returns>
+    public static bool IsLetter(this char @char)
     {
-        return char.IsLetter(c);
+        return Char.IsLetter(@char);
     }
 }

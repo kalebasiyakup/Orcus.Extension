@@ -3,13 +3,13 @@ using System.Text;
 
 public static partial class OrcusStringExtension
 {
-    public static string ToMd5Hash(this string value)
+    public static string ToMd5Hash(this string str)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
 
         using (var md5 = new MD5CryptoServiceProvider())
         {
-            byte[] dizi = Encoding.UTF8.GetBytes(value);
+            byte[] dizi = Encoding.UTF8.GetBytes(str);
             dizi = md5.ComputeHash(dizi);
             StringBuilder sb = new StringBuilder();
             foreach (byte ba in dizi)

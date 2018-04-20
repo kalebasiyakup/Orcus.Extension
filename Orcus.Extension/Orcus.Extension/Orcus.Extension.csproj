@@ -46,17 +46,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.ByteArray\ByteArray.DecompressGZip.cs" />
+    <Compile Include="System.ByteArray\ByteArray.ToBase64String.cs" />
     <Compile Include="System.Char\Char.IsDigit.cs" />
-    <Compile Include="System.Char\Char.IsPunctuation.cs" />
     <Compile Include="System.Char\Char.IsSymbol.cs" />
     <Compile Include="System.Char\Char.IsLetter.cs" />
     <Compile Include="System.Char\Char.IsNumber.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotEmpty.cs" />
-    <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotNullAndEmpty.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotNullOrEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNullOrEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsEmpty.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.ToDataTable.cs" />
     <Compile Include="System.Collections.Generic\IList\IList.ToCsv.cs" />
+    <Compile Include="System.Data\DataTable\DataRow.ToEntity.cs" />
+    <Compile Include="System.Data\DataTable\DataTable.ToEntities.cs" />
     <Compile Include="System.Data\SqlClient\SqlCommand.FormatToHtml.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToCsv.cs" />
     <Compile Include="System.Data\DataTable\DataTable.ToList.cs" />
@@ -81,6 +84,7 @@
     <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToMonthDayString.cs" />
     <Compile Include="System.DateTime\ToDateTimeFormat\DateTime.ToFullDateTimeString.cs" />
     <Compile Include="System.IO.FileInfo\FileInfo.ReadToEnd.cs" />
+    <Compile Include="System.Object\Convert\Object.To.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeBinary.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeJavaScript.cs" />
     <Compile Include="System.Object\Object.Deserialize\String.DeserializeJson.cs" />
@@ -92,6 +96,16 @@
     <Compile Include="System.OperatingSystem\OperatingSystem.FormatToHtml.cs" />
     <Compile Include="System.Random\Random.Generate.cs" />
     <Compile Include="System.String\String.Byte.cs" />
+    <Compile Include="System.String\String.CompressGZip.cs" />
+    <Compile Include="System.String\String.GetAfter.cs" />
+    <Compile Include="System.String\String.GetBefore.cs" />
+    <Compile Include="System.String\String.GetBetween.cs" />
+    <Compile Include="System.String\String.IsAlphaNumeric.cs" />
+    <Compile Include="System.String\String.IsNotNull.cs" />
+    <Compile Include="System.String\String.IsNull.cs" />
+    <Compile Include="System.String\String.Replace.cs" />
+    <Compile Include="System.String\String.SaveAs.cs" />
+    <Compile Include="System.String\String.ToMemoryStream.cs" />
     <Compile Include="System.String\String.ToSha512.cs" />
     <Compile Include="System.String\String.ToMd5Hash.cs" />
     <Compile Include="System.Web\HttpContext.MachineName.cs" />
@@ -123,5 +137,6 @@
   <ItemGroup>
     <Compile Include="System.DateTime\DateTime.IsToday.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

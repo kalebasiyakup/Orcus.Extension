@@ -3,23 +3,23 @@ using System.Text;
 
 public static partial class OrcusStringExtension
 {
-    public static string ToSha512(this string value)
+    public static string ToSha512(this string str)
     {
-        return Sha512(value, new UTF8Encoding());
+        return Sha512(str, new UTF8Encoding());
     }
 
-    public static string ToSha512(this string value, Encoding encoding)
+    public static string ToSha512(this string str, Encoding encoding)
     {
-        return Sha512(value, encoding);
+        return Sha512(str, encoding);
     }
 
-    private static string Sha512(string value, Encoding encoding)
+    private static string Sha512(string str, Encoding encoding)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
 
         using (var shaHash = new SHA512CryptoServiceProvider())
         {
-            byte[] data = shaHash.ComputeHash(encoding.GetBytes(value));
+            byte[] data = shaHash.ComputeHash(encoding.GetBytes(str));
             StringBuilder sBuilder = new StringBuilder();
             for (int i = 0; i < data.Length; i++)
                 sBuilder.Append(data[i].ToString("x2"));

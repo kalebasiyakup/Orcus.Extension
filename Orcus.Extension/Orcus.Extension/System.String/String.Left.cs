@@ -2,13 +2,13 @@
 
 public static partial class OrcusStringExtension
 {
-    public static string Left(this string value, int count)
+    public static string Left(this string str, int count)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
 
-        if (count < 0 || value.Length < count)
+        if (count < 0 || str.Length < count)
             throw new ArgumentOutOfRangeException(nameof(count), count, "Belirtilen karakter miktarı aralık dışında.");
 
-        return value.Substring(0, count);
+        return str.Substring(0, count);
     }
 }

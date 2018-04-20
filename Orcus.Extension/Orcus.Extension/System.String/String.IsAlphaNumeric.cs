@@ -2,8 +2,8 @@
 
 public static partial class OrcusStringExtension
 {
-    public static bool IsAlpha(this string str)
+    public static bool IsAlphaNumeric(this string str)
     {
-        return !Regex.IsMatch(str, "[^a-zA-Z]");
+        return !Regex.IsMatch(str, "[^a-zA-Z0-9]");
     }
 }

@@ -2,27 +2,27 @@
 
 public static partial class OrcusStringExtension
 {
-    public static string[] Split(this string value,
+    public static string[] Split(this string str,
         string separator,
         StringSplitOptions stringSplitOption = StringSplitOptions.None)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
         separator.ExceptionIfNull(nameof(separator));
 
-        return value.Split(new[]
+        return str.Split(new[]
             {
                     separator
                 },
             stringSplitOption);
     }
 
-    public static string[] Split(this string value,
+    public static string[] Split(this string str,
         StringSplitOptions stringSplitOption,
         params string[] separators)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
         separators.ExceptionIfNull(nameof(separators));
 
-        return value.Split(separators, stringSplitOption);
+        return str.Split(separators, stringSplitOption);
     }
 }

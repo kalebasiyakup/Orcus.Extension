@@ -1,11 +1,10 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 
 public static partial class OrcusStringExtension
 {
     public static bool IsNumeric(this string str)
     {
-        str.ExceptionIfNull(nameof(str));
-
-        return str.ToCharArray().All(x => x.IsNumber());
+        return !Regex.IsMatch(str, "[^0-9]");
     }
 }

@@ -16,10 +16,7 @@ namespace Orcus.Extension.Testing
 
             char isNumeric = '8';
             Assert.IsTrue(isNumeric.IsNumber());
-
-            char isPunctuation = '(';
-            Assert.IsTrue(isPunctuation.IsPunctuation());
-
+            
             char isSymbol = '<';
             Assert.IsTrue(isSymbol.IsSymbol());
         }

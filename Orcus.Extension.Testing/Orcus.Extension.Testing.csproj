@@ -46,10 +46,18 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="System.ByteArray\System.ToBase64String.Test.cs" />
+    <Compile Include="System.ByteArray\System.ByteArray.Test.cs" />
     <Compile Include="System.Char\Char.Test.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IsEmpty.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IsNotEmpty.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IsNotNullOrEmpty.cs" />
+    <Compile Include="System.Collections.Generic\IEnumerable\IsNullOrEmpty.cs" />
     <Compile Include="System.Collections.Generic\IList\IList.ToCsv.Test.cs" />
+    <Compile Include="System.Data.DataTable\DataTable.ToEntities.cs" />
     <Compile Include="System.DateTime\DateTime.Test.cs" />
     <Compile Include="System.IO.FileInfo\IO.Test.cs" />
     <Compile Include="System.Object\Object.Test.cs" />

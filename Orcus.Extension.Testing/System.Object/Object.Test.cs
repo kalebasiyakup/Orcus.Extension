@@ -73,5 +73,14 @@ namespace Orcus.Extension.Testing
 
             var ds = js.DeserializeXml<Sehirler>();
         }
+
+        [TestMethod]
+        public void ObjectTo()
+        {
+            Sehirler sehirs = new Sehirler();
+            sehirs.ListAdd();
+            var obj  = (object)sehirs;
+            var cls = obj.To<Sehirler>();
+        }
     }
 }

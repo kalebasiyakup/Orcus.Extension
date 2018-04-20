@@ -6,23 +6,23 @@ using System.Reflection;
 
 public static partial class OrcusDataTableExtension
 {
-    public static List<T> DataTableToList<T>(this DataTable sourceDataTable) where T : class, new()
+    public static List<T> DataTableToList<T>(this DataTable dataTable) where T : class, new()
     {
-        sourceDataTable.ExceptionIfNull(nameof(sourceDataTable));
+        dataTable.ExceptionIfNull(nameof(dataTable));
 
         List<T> returnList;
-        if (sourceDataTable != null)
+        if (dataTable != null)
         {
             var properties = typeof(T).GetProperties();
             var strs = new Dictionary<string, PropertyInfo>();
             var propertyInfoArray = properties;
             foreach (var propertyInfo in propertyInfoArray)
             {
-                if (sourceDataTable.Columns[propertyInfo.Name] != null && !strs.Keys.Contains(propertyInfo.Name))
+                if (dataTable.Columns[propertyInfo.Name] != null && !strs.Keys.Contains(propertyInfo.Name))
                     strs.Add(propertyInfo.Name, propertyInfo);
             }
             var tempList = new List<T>();
-            foreach (DataRow row in sourceDataTable.Rows)
+            foreach (DataRow row in dataTable.Rows)
             {
                 var t = Activator.CreateInstance<T>();
                 foreach (var str in strs)

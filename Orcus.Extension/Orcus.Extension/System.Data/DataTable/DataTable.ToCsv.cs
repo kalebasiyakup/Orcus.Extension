@@ -5,19 +5,19 @@ using System.Text;
 
 public static partial class OrcusDataTableExtension
 {
-    public static void ToCsv(this DataTable sourceDataTable,
+    public static void ToCsv(this DataTable dataTable,
                                 string pathToSave = @"c:\OrcusExport",
                                 string fileName = "ExportCsv",
                                 string delimiter = ";", 
                                 bool includeHeader = true)
     {
-        sourceDataTable.ExceptionIfNull(nameof(sourceDataTable));
+        dataTable.ExceptionIfNull(nameof(dataTable));
 
         var result = new StringBuilder();
 
         if (includeHeader)
         {
-            foreach (DataColumn column in sourceDataTable.Columns)
+            foreach (DataColumn column in dataTable.Columns)
             {
                 result.Append(column.ColumnName);
                 result.Append(delimiter);
@@ -26,7 +26,7 @@ public static partial class OrcusDataTableExtension
             result.Append(Environment.NewLine);
         }
 
-        foreach (DataRow row in sourceDataTable.Rows)
+        foreach (DataRow row in dataTable.Rows)
         {
             foreach (var item in row.ItemArray)
             {

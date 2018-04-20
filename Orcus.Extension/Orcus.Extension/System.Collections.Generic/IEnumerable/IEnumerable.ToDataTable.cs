@@ -5,14 +5,14 @@ using System.Reflection;
 
 public static partial class OrcusIEnumerableTExtension
 {
-    public static DataTable ToDataTable<T>(this IEnumerable<T> collection)
+    public static DataTable ToDataTable<T>(this IEnumerable<T> enumerable)
     {
-        collection.ExceptionIfNull(nameof(collection));
+        enumerable.ExceptionIfNull(nameof(enumerable));
         var dtReturn = new DataTable();
 
         PropertyInfo[] oProps = null;
 
-        foreach (var rec in collection)
+        foreach (var rec in enumerable)
         {
             if (oProps == null)
             {

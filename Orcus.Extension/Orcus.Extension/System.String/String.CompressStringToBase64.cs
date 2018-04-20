@@ -7,29 +7,29 @@ public static partial class OrcusStringExtension
     /// <summary>
     /// Değeri GZip metotu ile sıkıştırılmış Base64 değerine dönüştürür.
     /// </summary>
-    /// <param name="value"></param>
+    /// <param name="str"></param>
     /// <returns></returns>
-    public static string CompressStringToBase64(this string value)
+    public static string CompressStringToBase64(this string str)
     {
-        return _compressStringToBase64(value, new UTF8Encoding());
+        return _compressStringToBase64(str, new UTF8Encoding());
     }
 
     /// <summary>
     /// Değeri GZip metotu ile sıkıştırılmış Base64 değerine dönüştürür.
     /// </summary>
-    /// <param name="value"></param>
+    /// <param name="str"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static string CompressStringToBase64(this string value, Encoding encoding)
+    public static string CompressStringToBase64(this string str, Encoding encoding)
     {
-        return _compressStringToBase64(value, encoding);
+        return _compressStringToBase64(str, encoding);
     }
 
-    private static string _compressStringToBase64(string value, Encoding encoding)
+    private static string _compressStringToBase64(string str, Encoding encoding)
     {
-        value.ExceptionIfNull(nameof(value));
+        str.ExceptionIfNull(nameof(str));
 
-        var buffer = encoding.GetBytes(value);
+        var buffer = encoding.GetBytes(str);
         using (var memoryStream = new System.IO.MemoryStream())
         {
             using (var gZipStream = new GZipStream(memoryStream, CompressionMode.Compress, true))

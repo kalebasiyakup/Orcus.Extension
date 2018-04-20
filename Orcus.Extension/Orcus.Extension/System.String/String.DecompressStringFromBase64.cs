@@ -8,27 +8,27 @@ public static partial class OrcusStringExtension
     /// <summary>
     /// CompressStringToBase64 metotu ile sıkıştırılmış olan değeri GZip metotu ile açılmış olan değeri verir.
     /// </summary>
-    /// <param name="value"></param>
+    /// <param name="str"></param>
     /// <returns></returns>
-    public static string DecompressStringFromBase64(this string value)
+    public static string DecompressStringFromBase64(this string str)
     {
-        return _decompressStringFromBase64(value, new UTF8Encoding());
+        return _decompressStringFromBase64(str, new UTF8Encoding());
     }
 
     /// <summary>
     /// CompressStringToBase64 metotu ile sıkıştırılmış olan değeri GZip metotu ile açılmış olan değeri verir.
     /// </summary>
-    /// <param name="value"></param>
+    /// <param name="str"></param>
     /// <param name="encoding"></param>
     /// <returns></returns>
-    public static string DecompressStringFromBase64(this string value, Encoding encoding)
+    public static string DecompressStringFromBase64(this string str, Encoding encoding)
     {
-        return _decompressStringFromBase64(value, encoding);
+        return _decompressStringFromBase64(str, encoding);
     }
 
-    private static string _decompressStringFromBase64(string value, Encoding encoding)
+    private static string _decompressStringFromBase64(string str, Encoding encoding)
     {
-        byte[] gZipBuffer = Convert.FromBase64String(value);
+        byte[] gZipBuffer = Convert.FromBase64String(str);
         using (var memoryStream = new MemoryStream())
         {
             int dataLength = BitConverter.ToInt32(gZipBuffer, 0);
