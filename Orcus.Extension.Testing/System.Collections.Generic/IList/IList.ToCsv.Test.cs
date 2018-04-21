@@ -2,14 +2,13 @@
 
 namespace Orcus.Extension.Testing
 {
-    [TestClass]
-    public class IListExtensionTest
+    public partial class OrcusExtensionTest
     {
         [TestMethod]
-        public void ToCsv()
+        public void ListToCsvTest()
         {
             DataSource.Products.ToCsv<Product>(exclude: "ProductId,OutOfStock");
-            
+
             Assert.IsTrue(true);
         }
     }

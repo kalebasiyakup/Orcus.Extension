@@ -2,12 +2,12 @@
 
 public static partial class OrcusStringExtension
 {
-    public static String ToBase64String(this Byte[] @byte)
+    public static string ToBase64String(this byte[] @byte)
     {
         return Convert.ToBase64String(@byte);
     }
 
-    public static String ToBase64String(this Byte[] @byte, Base64FormattingOptions options)
+    public static string ToBase64String(this byte[] @byte, Base64FormattingOptions options)
     {
         return Convert.ToBase64String(@byte, options);
     }

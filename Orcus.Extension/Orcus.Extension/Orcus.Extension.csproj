@@ -122,7 +122,6 @@
     <Compile Include="System.String\String.IsNullOrEmptyOrWhiteSpace.cs" />
     <Compile Include="System.String\String.IsNumeric.cs" />
     <Compile Include="System.String\String.Left.cs" />
-    <Compile Include="System.String\String.Split.cs" />
     <Compile Include="System.String\String.HtmlTableToDataTable.cs" />
     <Compile Include="Utilities\OrcusBarcode.cs" />
     <Compile Include="Utilities\OrcusHtmlFormat.cs" />
@@ -137,6 +136,8 @@
   <ItemGroup>
     <Compile Include="System.DateTime\DateTime.IsToday.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="System.Data\DataColumnCollection.AddRange.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

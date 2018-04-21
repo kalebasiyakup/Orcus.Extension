@@ -6,7 +6,7 @@ namespace Orcus.Extension.Testing
     public class SystemToBase64String
     {
         [TestMethod]
-        public void ToBase64String()
+        public void SystemToBase64StringTest()
         {
             byte[] @byte = "OrcusExtension".ToBytes();
 

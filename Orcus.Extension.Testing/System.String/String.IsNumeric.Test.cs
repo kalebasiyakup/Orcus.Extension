@@ -5,7 +5,7 @@ namespace Orcus.Extension.Testing
     public partial class OrcusExtensionTest
     {
         [TestMethod]
-        public void SystemStringTest()
+        public void StringIsNumericTest()
         {
         }
     }

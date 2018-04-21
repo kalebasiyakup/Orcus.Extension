@@ -1,14 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Orcus.Extension.Testing.System.Collections.Generic.IEnumerable
+namespace Orcus.Extension.Testing
 {
-    [TestClass]
-    public class IsNotEmpty
+    public partial class OrcusExtensionTest
     {
         [TestMethod]
-        public void IEnumerable_IsNotEmpty()
+        public void EnumerableIsNotEmptyTest()
         {
             IEnumerable<string> thisEmpty = new List<string>().AsEnumerable();
             IEnumerable<string> thisNotEmpty = new List<string> { "Orcus" }.AsEnumerable();

@@ -1,11 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Orcus.Extension.Testing
 {
     public partial class OrcusExtensionTest
     {
         [TestMethod]
-        public void SystemStringTest()
+        public void StringByteTest()
         {
         }
     }

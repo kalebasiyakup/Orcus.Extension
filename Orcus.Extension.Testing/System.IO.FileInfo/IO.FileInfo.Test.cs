@@ -1,13 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
+﻿using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Orcus.Extension.Testing
 {
-    [TestClass]
-    public class IO
+    public partial class OrcusExtensionTest
     {
         [TestMethod]
-        public void IOTest()
+        public void IOFileInfoTest()
         {
             FileInfo fileInfo = new FileInfo(@"C:\Windows\WindowsUpdate.log");
             var result = fileInfo.ReadToEnd();

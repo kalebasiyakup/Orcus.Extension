@@ -2,11 +2,8 @@
 
 namespace Orcus.Extension.Testing
 {
+    [TestClass]
     public partial class OrcusExtensionTest
     {
-        [TestMethod]
-        public void SystemStringTest()
-        {
-        }
     }
 }

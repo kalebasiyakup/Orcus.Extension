@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Reflection;
 
 public static partial class OrcusIEnumerableTExtension
 {
     public static DataTable ToDataTable<T>(this IEnumerable<T> enumerable)
     {
-        enumerable.ExceptionIfNull(nameof(enumerable));
+        var recs = enumerable as T[] ?? enumerable.ToArray();
+        recs.ExceptionIfNull(nameof(enumerable));
         var dtReturn = new DataTable();
 
         PropertyInfo[] oProps = null;
 
-        foreach (var rec in enumerable)
+        foreach (var rec in recs)
         {
             if (oProps == null)
             {

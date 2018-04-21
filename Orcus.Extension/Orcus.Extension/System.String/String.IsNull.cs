@@ -1,8 +1,6 @@
-﻿using System;
-
-public static partial class OrcusStringExtension
+﻿public static partial class OrcusStringExtension
 {
-    public static bool IsNull(this String str)
+    public static bool IsNull(this string str)
     {
         return str == null;
     }

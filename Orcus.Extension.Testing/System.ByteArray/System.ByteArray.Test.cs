@@ -6,7 +6,7 @@ namespace Orcus.Extension.Testing
     public class SystemByteArray
     {
         [TestMethod]
-        public void DecompressGZip()
+        public void SystemByteArrayDecompressGZipTest()
         {
             byte[] @byte = "OrcusExtension".CompressGZip();
 
