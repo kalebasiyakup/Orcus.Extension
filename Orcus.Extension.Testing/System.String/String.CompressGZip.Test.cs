@@ -7,6 +7,11 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringCompressGZipTest()
         {
+            byte[] val = "OrcusExtension".CompressGZip();
+
+            string result = val.DecompressGZip();
+
+            Assert.AreEqual("OrcusExtension", result);
         }
     }
 }

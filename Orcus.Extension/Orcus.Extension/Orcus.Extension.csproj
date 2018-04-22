@@ -108,6 +108,7 @@
     <Compile Include="System.String\String.ToMemoryStream.cs" />
     <Compile Include="System.String\String.ToSha512.cs" />
     <Compile Include="System.String\String.ToMd5Hash.cs" />
+    <Compile Include="System.String\String.ToTitleCase.cs" />
     <Compile Include="System.Web\HttpContext.MachineName.cs" />
     <Compile Include="System.Web\HttpContext.IpAdress.cs" />
     <Compile Include="System.Web\HttpContext.FormatHttpContext.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="System.String\String.IsNumeric.cs" />
     <Compile Include="System.String\String.Left.cs" />
     <Compile Include="System.String\String.HtmlTableToDataTable.cs" />
+    <Compile Include="TArray\Array.ToDataTable.cs" />
     <Compile Include="Utilities\OrcusBarcode.cs" />
     <Compile Include="Utilities\OrcusHtmlFormat.cs" />
     <Compile Include="Utilities\OrcusUtility.cs" />

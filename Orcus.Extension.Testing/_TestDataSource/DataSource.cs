@@ -26,9 +26,9 @@ namespace Orcus.Extension.Testing
             {
                 List<Category> catList = new List<Category>
                 {
-                    new Category { CategoryID = 1, CategoryName = "Bath" },
-                    new Category { CategoryID = 2, CategoryName = "Bedding" },
-                    new Category { CategoryID = 3, CategoryName = "kitchen" }
+                    new Category { CategoryID = 1, CategoryName = "Cars" },
+                    new Category { CategoryID = 2, CategoryName = "Travels" },
+                    new Category { CategoryID = 3, CategoryName = "Games" }
                 };
                 return catList;
             }

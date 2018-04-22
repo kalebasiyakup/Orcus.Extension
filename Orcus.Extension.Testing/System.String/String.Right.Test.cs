@@ -7,6 +7,11 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringRightTest()
         {
+            string str = "Orcus";
+
+            string value = str.Right(2);
+
+            Assert.AreEqual("us", value);
         }
     }
 }

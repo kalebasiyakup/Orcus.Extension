@@ -21,10 +21,10 @@ public static partial class OrcusStringExtension
         {
             byte[] data = shaHash.ComputeHash(encoding.GetBytes(str));
             StringBuilder sBuilder = new StringBuilder();
-            for (int i = 0; i < data.Length; i++)
-                sBuilder.Append(data[i].ToString("x2"));
+            foreach (var item in data)
+                sBuilder.Append(item.ToString("x2"));
 
-            return sBuilder.ToString();
+            return sBuilder.ToString().ToUpper();
         }
     }
 }

@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrcusExtensionTest.cs" />
@@ -56,7 +57,6 @@
     <Compile Include="System.Char\Char.IsLetter.Test.cs" />
     <Compile Include="System.Char\Char.IsNumber.Test.cs" />
     <Compile Include="System.Char\Char.IsSymbol.Test.cs" />
-    <Compile Include="System.Char\Char.Test.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.ToDataTable.Test.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsEmpty.Test.cs" />
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNotEmpty.Test.cs" />
@@ -78,12 +78,11 @@
     <Compile Include="System.String\String.GetAfter.Test.cs" />
     <Compile Include="System.String\String.GetBefore.Test.cs" />
     <Compile Include="System.String\String.GetBetween.Test.cs" />
-    <Compile Include="System.String\String.HtmlTableToDataTable.Test.cs" />
     <Compile Include="System.String\String.IsAlpha.Test.cs" />
     <Compile Include="System.String\String.IsAlphaNumeric.Test.cs" />
     <Compile Include="System.String\String.IsNotNull.Test.cs" />
     <Compile Include="System.String\String.IsNull.Test.cs" />
-    <Compile Include="System.String\String.IsNullOrEmptyOrWhiteSpace.Test.cs" />
+    <Compile Include="System.String\String.IsNotNullOrWhiteSpace.Test.cs" />
     <Compile Include="System.String\String.IsNumeric.Test.cs" />
     <Compile Include="System.String\String.Left.Test.cs" />
     <Compile Include="System.String\String.Replace.Test.cs" />
@@ -92,8 +91,9 @@
     <Compile Include="System.String\String.ToMd5Hash.Test.cs" />
     <Compile Include="System.String\String.ToMemoryStream.Test.cs" />
     <Compile Include="System.String\String.ToSha512.Test.cs" />
-    <Compile Include="System.String\System.String.Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.String\String.ToTitleCase.Test.cs" />
+    <Compile Include="TArray\TArray.Test.cs" />
     <Compile Include="_TestDataSource\DataSource.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +105,7 @@
       <Name>Orcus.Extension</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

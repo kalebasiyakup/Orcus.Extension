@@ -7,6 +7,8 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void CharIsDigitTest()
         {
+            const char isDigit = '5';
+            Assert.IsTrue(isDigit.IsDigit());
         }
     }
 }

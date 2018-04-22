@@ -7,6 +7,8 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void CharIsSymbolTest()
         {
+            const char isSymbol = '<';
+            Assert.IsTrue(isSymbol.IsSymbol());
         }
     }
 }

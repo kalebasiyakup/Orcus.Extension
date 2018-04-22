@@ -7,6 +7,8 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void CharIsNumberTest()
         {
+            const char isNumeric = '8';
+            Assert.IsTrue(isNumeric.IsNumber());
         }
     }
 }

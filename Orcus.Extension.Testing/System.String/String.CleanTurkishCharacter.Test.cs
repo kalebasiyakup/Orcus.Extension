@@ -7,6 +7,8 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringCleanTurkishCharacterTest()
         {
+            string trStr = "Ş";
+            Assert.AreEqual("S", trStr.CleanTurkishCharacter());
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Reflection;
 
 public static partial class OrcusDataTableExtension
 {
-    public static List<T> DataTableToList<T>(this DataTable dataTable) where T : class, new()
+    public static List<T> ToList<T>(this DataTable dataTable) where T : class, new()
     {
         dataTable.ExceptionIfNull(nameof(dataTable));
 

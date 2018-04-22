@@ -7,6 +7,13 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringGetBeforeTest()
         {
+            string str = "Orcus";
+
+            string result1 = str.GetBefore("r");
+            string result2 = str.GetBefore("a");
+
+            Assert.AreEqual("O", result1);
+            Assert.AreEqual("", result2);
         }
     }
 }

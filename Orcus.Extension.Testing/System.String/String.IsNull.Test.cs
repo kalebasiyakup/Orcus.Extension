@@ -7,6 +7,11 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringIsNullTest()
         {
+            string thisNull = null;
+
+            bool value1 = thisNull.IsNullOrEmpty();
+
+            Assert.IsTrue(value1);
         }
     }
 }

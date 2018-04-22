@@ -7,6 +7,8 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void CharIsLetterTest()
         {
+            const char isLetter = 'B';
+            Assert.IsTrue(isLetter.IsLetter());
         }
     }
 }

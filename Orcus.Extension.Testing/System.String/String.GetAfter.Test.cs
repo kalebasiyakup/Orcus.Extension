@@ -7,6 +7,13 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void StringGetAfterTest()
         {
+            string str = "Orcus";
+
+            string result1 = str.GetAfter("c");
+            string result2 = str.GetAfter("a");
+
+            Assert.AreEqual("us", result1);
+            Assert.AreEqual("", result2);
         }
     }
 }

@@ -7,6 +7,10 @@ namespace Orcus.Extension.Testing
         [TestMethod]
         public void DataTableToCsvTest()
         {
+            var dt = DataSource.Products.ToDataTable();
+            dt.ToCsv();
+
+            Assert.IsTrue(true);
         }
     }
 }
