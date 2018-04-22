@@ -4,20 +4,20 @@ using System.Text;
 
 public static partial class OrcusCharExtension
 {
-    public static string DecompressGZip(this byte[] @byte)
+    public static string DecompressGZip(this byte[] _byte)
     {
-        return _decompressGZip(@byte, Encoding.Default);
+        return _decompressGZip(_byte, Encoding.Default);
     }
 
-    public static string DecompressGZip(this byte[] @byte, Encoding encoding)
+    public static string DecompressGZip(this byte[] _byte, Encoding encoding)
     {
-        return _decompressGZip(@byte, encoding);
+        return _decompressGZip(_byte, encoding);
     }
 
-    private static string _decompressGZip(byte[] value, Encoding encoding)
+    private static string _decompressGZip(byte[] _byte, Encoding encoding)
     {
         const int bufferSize = 1024;
-        using (var memoryStream = new MemoryStream(value))
+        using (var memoryStream = new MemoryStream(_byte))
         {
             using (var zipStream = new GZipStream(memoryStream, CompressionMode.Decompress))
             {
