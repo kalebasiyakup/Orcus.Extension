@@ -64,6 +64,7 @@
     <Compile Include="System.Collections.Generic\IEnumerable\IEnumerable.IsNullOrEmpty.Test.cs" />
     <Compile Include="System.Collections.Generic\IList\IList.ToCsv.Test.cs" />
     <Compile Include="System.Data.DataTable\DataTable.DataRow.ToEntityTest.cs" />
+    <Compile Include="System.Data.DataTable\DataTable.ToHtml.Test.cs" />
     <Compile Include="System.Data.DataTable\DataTable.ToCsv.Test.cs" />
     <Compile Include="System.Data.DataTable\DataTable.ToEntities.Test.cs" />
     <Compile Include="System.Data.DataTable\DataTable.ToList.Test.cs" />
